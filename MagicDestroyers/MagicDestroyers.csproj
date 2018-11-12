@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06AC4CB8-D876-4618-8429-9AA1B8AE0238}</ProjectGuid>
+    <ProjectGuid>{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IntroductionToOOP</RootNamespace>
-    <AssemblyName>IntroductionToOOP</AssemblyName>
+    <RootNamespace>MagicDestroyers</RootNamespace>
+    <AssemblyName>MagicDestroyers</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Armor\Chainlink.cs" />
+    <Compile Include="Armor\ClothRobe.cs" />
+    <Compile Include="Armor\LeatherVest.cs" />
+    <Compile Include="Classes\Assassin.cs" />
+    <Compile Include="Classes\Druid.cs" />
+    <Compile Include="Classes\Knight.cs" />
+    <Compile Include="Classes\Mage.cs" />
+    <Compile Include="Classes\Necromancer.cs" />
+    <Compile Include="Classes\Warrior.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warrior.cs" />
-    <Compile Include="Wizard.cs" />
+    <Compile Include="Weapons\Axe.cs" />
+    <Compile Include="Weapons\Hammer.cs" />
+    <Compile Include="Weapons\Staff.cs" />
+    <Compile Include="Weapons\Sword.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

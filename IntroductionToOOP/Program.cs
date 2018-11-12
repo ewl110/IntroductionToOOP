@@ -8,8 +8,19 @@ namespace IntroductionToOOP
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Warrior hero = new Warrior();
+            hero.damage = 6;
+            hero.hp = 12;
+            hero.level = 1;
+            hero.name = "Greg";
+
+            Wizard villain = new Wizard();
+            villain.damage = 3;
+            villain.hp = 6;
+            villain.level = 1;
+            villain.name = "Gob";
         }
     }
 }

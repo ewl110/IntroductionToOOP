@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroductionToOOP", "IntroductionToOOP\IntroductionToOOP.csproj", "{06AC4CB8-D876-4618-8429-9AA1B8AE0238}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicDestroyers", "MagicDestroyers\MagicDestroyers.csproj", "{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{06AC4CB8-D876-4618-8429-9AA1B8AE0238}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06AC4CB8-D876-4618-8429-9AA1B8AE0238}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06AC4CB8-D876-4618-8429-9AA1B8AE0238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A693ED-04E7-4C8E-9FC0-D49A4A14D33B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
