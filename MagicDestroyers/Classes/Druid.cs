@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MagicDestroyers.Armor;
+using MagicDestroyers.Weapons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,20 @@ namespace MagicDestroyers.Classes
 {
     class Druid
     {
+        private int abilityPoints;
+        private LeatherVest armor;
+        private string faction;
+        private int hp;
+        private int level;
+        private string name;
+        private Staff weapon;
+
+        public int AbilityPoints { get; set; }
+        public LeatherVest Armor { get; set; }
+        public string Faction { get; set; }
+        public int HP { get; set; }
+        public int Level { get; set; }
+        public string Name { get; set; }
+        public Staff Weapon { get; set; }
     }
 }

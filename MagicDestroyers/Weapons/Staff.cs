@@ -8,5 +8,8 @@ namespace MagicDestroyers.Weapons
 {
     class Staff
     {
+        private int damage;
+
+        public int Damage { get; set; }
     }
 }

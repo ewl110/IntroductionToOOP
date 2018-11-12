@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MagicDestroyers.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace MagicDestroyers
 {
     class Program
     {
-        static void Main()
-        {
-        }
+
+        Warrior warrior = new Warrior();
+        //int warriorDamage = warrior.Weapon.Damage;
     }
 }

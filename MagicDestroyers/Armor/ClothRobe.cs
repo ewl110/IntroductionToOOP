@@ -8,5 +8,8 @@ namespace MagicDestroyers.Armor
 {
     class ClothRobe
     {
+        private int armorClass;
+
+        public int ArmorClass { get; set; }
     }
 }
