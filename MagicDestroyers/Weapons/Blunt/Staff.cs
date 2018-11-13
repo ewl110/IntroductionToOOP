@@ -30,6 +30,9 @@ namespace MagicDestroyers.Weapons.Blunt
 
         }
 
-        public void Empower() { }
+        public void Empower()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

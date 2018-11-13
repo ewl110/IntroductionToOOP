@@ -29,6 +29,9 @@ namespace MagicDestroyers.Weapons.Blunt
 
         }
 
-        public void Stun() { }
+        public void Stun()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -30,6 +30,9 @@ namespace MagicDestroyers.Weapons.Sharp
 
         }
 
-        public void Bloodthirst() { }
+        public void Bloodthirst()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -132,10 +132,19 @@
 
         }
 
-        public void Moonfire() { }
+        public void Moonfire()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void OneWithNature() { }
+        public void OneWithNature()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Starburst() { }
+        public void Starburst()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

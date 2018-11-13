@@ -132,10 +132,19 @@
 
         }
 
-        public void Execute() { }
+        public void Execute()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void SkinHarden() { }
+        public void SkinHarden()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Strike(){}
+        public void Strike()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -132,10 +132,19 @@
 
         }
 
-        public void ArcaneWrath() { }
+        public void ArcaneWrath()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Firewall() { }
+        public void Fireball()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Meditation() { }
+        public void Meditation()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

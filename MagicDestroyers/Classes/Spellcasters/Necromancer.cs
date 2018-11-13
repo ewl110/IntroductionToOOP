@@ -132,10 +132,19 @@
 
         }
 
-        public void BoneShield() { }
+        public void BoneShield()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void ShadowRage() { }
+        public void ShadowRage()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void VampireTouch() { }
+        public void VampireTouch()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

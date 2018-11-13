@@ -132,10 +132,19 @@
 
         }
 
-        public void HolyBlow() { }
+        public void HolyBlow()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void PurifySoul() { }
+        public void PurifySoul()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void RighteousWings() { }
+        public void RighteousWings()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

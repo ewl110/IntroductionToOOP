@@ -34,6 +34,8 @@ namespace IntroductionToOOP.Characters.Melee
                 else
                 {
                     Console.WriteLine("Level must be between 1 and 100. Default level of 1 was set.");
+                    level = 1;
+                    // throw new ArgumentOutOfRangeException(string.Empty, "Level must be between 1 and 100. Default level of 1 was set.");
                 }
             }
         }
@@ -55,6 +57,11 @@ namespace IntroductionToOOP.Characters.Melee
         {
             enemy.HitPoints -= Damage;
             Console.WriteLine($"{Name} is attacking {enemy.Name}. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
+        }
+
+        public void Strike(Warrior enemy)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -132,10 +132,19 @@
                 
         }
 
-        public void Bleed() { }
+        public void Bleed()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Raze() { }
+        public void Raze()
+        {
+            throw new NotImplementedException();
+        }
 
-        public void Survival() { }
+        public void Survival()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

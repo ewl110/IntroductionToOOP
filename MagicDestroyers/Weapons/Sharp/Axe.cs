@@ -30,6 +30,9 @@ namespace MagicDestroyers.Weapons.Sharp
 
         }
 
-        public void HackNSlash() { }
+        public void HackNSlash()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
