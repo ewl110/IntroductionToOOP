@@ -6,9 +6,6 @@ namespace MagicDestroyers.Armor.Leather
     {
         private const int DEFAULT_ARMORCLASS = 11;
 
-        public LeatherVest()
-        {
-            this.ArmorClass = DEFAULT_ARMORCLASS;
-        }
-    }
+        public LeatherVest() : base(DEFAULT_ARMORCLASS) { }
+}
 }

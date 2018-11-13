@@ -8,5 +8,6 @@ namespace MagicDestroyers.Armor.Leather
 {
     class Leather : Armor
     {
+        protected Leather(int armorClass) : base(armorClass) { }
     }
 }

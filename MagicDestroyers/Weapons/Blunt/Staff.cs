@@ -6,10 +6,7 @@ namespace MagicDestroyers.Weapons.Blunt
     {
         private const int DEFAULT_DAMAGE = 4;
 
-        public Staff()
-        {
-            this.Damage = DEFAULT_DAMAGE;
-        }
+        public Staff() : base(DEFAULT_DAMAGE) { }
 
         public void Empower()
         {

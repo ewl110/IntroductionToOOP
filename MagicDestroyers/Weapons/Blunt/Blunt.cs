@@ -8,5 +8,6 @@ namespace MagicDestroyers.Weapons.Blunt
 {
     class Blunt : Weapon
     {
+        protected Blunt(int damage) : base(damage) { }
     }
 }

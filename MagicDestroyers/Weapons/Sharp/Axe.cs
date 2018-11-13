@@ -6,10 +6,7 @@ namespace MagicDestroyers.Weapons.Sharp
     {
         private const int DEFAULT_DAMAGE = 8;
 
-        public Axe()
-        {
-            this.Damage = DEFAULT_DAMAGE;
-        }
+        public Axe() : base(DEFAULT_DAMAGE) { }
 
         public void HackNSlash()
         {

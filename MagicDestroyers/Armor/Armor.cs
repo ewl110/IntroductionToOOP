@@ -28,5 +28,9 @@ namespace MagicDestroyers.Armor
                 }
             }
         }
+
+        protected Armor(int armorClass) {
+            this.ArmorClass = armorClass;
+        }
     }
 }

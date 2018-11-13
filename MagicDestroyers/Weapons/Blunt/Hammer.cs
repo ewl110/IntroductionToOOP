@@ -8,10 +8,7 @@ namespace MagicDestroyers.Weapons.Blunt
 
         private int damage;
 
-        public Hammer()
-        {
-            this.Damage = DEFAULT_DAMAGE;
-        }
+        public Hammer() : base(DEFAULT_DAMAGE) { }
 
         public void Stun()
         {

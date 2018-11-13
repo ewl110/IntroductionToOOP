@@ -8,5 +8,6 @@ namespace MagicDestroyers.Weapons.Sharp
 {
     class Sharp : Weapon
     {
+        protected Sharp(int damage) : base(damage) { }
     }
 }

@@ -8,5 +8,6 @@ namespace MagicDestroyers.Armor.Cloth
 {
     class Cloth : Armor
     {
+        protected Cloth(int armorClass) : base(armorClass) { }
     }
 }

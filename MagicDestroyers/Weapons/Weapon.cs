@@ -24,5 +24,9 @@
                 }
             }
         }
+
+        protected Weapon(int damage) {
+            this.Damage = damage;
+        }
     }
 }
