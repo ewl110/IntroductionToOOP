@@ -47,9 +47,9 @@
 
         public Druid(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            this.ManaPoints = DEFAULT_MANAPOINTS;
             this.Armor = DEFAULT_ARMOR;
-            this.Faction = DEFAULT_FACTION;
+            base.Faction = DEFAULT_FACTION;
+            base.ManaPoints = DEFAULT_MANAPOINTS;
             this.Weapon = DEFAULT_WEAPON;
         }
 

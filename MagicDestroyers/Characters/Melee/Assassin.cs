@@ -47,9 +47,9 @@
 
         public Assassin(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            base.AbilityPoints = DEFAULT_ABILITYPOINTS;
             this.Armor = DEFAULT_ARMOR;
-            this.Faction = DEFAULT_FACTION;
+            base.Faction = DEFAULT_FACTION;
             this.Weapon = DEFAULT_WEAPON;
         }
 
