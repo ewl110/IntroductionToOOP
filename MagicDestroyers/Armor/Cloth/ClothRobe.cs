@@ -26,7 +26,7 @@ namespace MagicDestroyers.Armor.Cloth
 
         public ClothRobe()
         {
-             
+            this.ArmorClass = 10;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace MagicDestroyers.Armor.Leather
 
         public LeatherVest()
         {
-
+            this.ArmorClass = 10;
         }
     }
 }

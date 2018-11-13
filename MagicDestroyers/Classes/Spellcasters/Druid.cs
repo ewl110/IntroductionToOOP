@@ -127,9 +127,15 @@
             }
         }
 
-        public Druid()
+        public Druid(string name, int level = 1, int hitPoints = 8)
         {
-
+            this.AbilityPoints = 10;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+            this.Weapon = new Staff();
         }
 
         public void Moonfire()

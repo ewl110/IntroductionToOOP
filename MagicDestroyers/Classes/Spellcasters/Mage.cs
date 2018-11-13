@@ -127,9 +127,15 @@
             }
         }
 
-        public Mage()
+        public Mage(string name, int level = 1, int hitPoints = 6)
         {
-
+            this.AbilityPoints = 20;
+            this.Armor = new ClothRobe();
+            this.Faction = "Spellcasters";
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+            this.Weapon = new Staff();
         }
 
         public void ArcaneWrath()

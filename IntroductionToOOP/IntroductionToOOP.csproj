@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Characters\Melee\Warrior.cs" />
     <Compile Include="Characters\Magic\Wizard.cs" />
+    <Compile Include="Weapons\Sharp\Sword.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

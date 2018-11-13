@@ -127,9 +127,15 @@
             }
         }
 
-        public Necromancer()
+        public Necromancer(string name, int level = 1, int hitPoints = 8)
         {
-
+            this.AbilityPoints = 14;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+            this.Weapon = new Sword();
         }
 
         public void BoneShield()

@@ -127,9 +127,15 @@
             }
         }
 
-        public Assassin()
+        public Assassin(string name, int level = 8, int hitPoints = 8)
         {
-                
+            this.AbilityPoints = 4;
+            this.Armor = new LeatherVest();
+            this.Faction = "Melee";
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+            this.Weapon = new Sword();
         }
 
         public void Bleed()

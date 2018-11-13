@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IntroductionToOOP.Weapons.Sharp;
+using System;
 namespace IntroductionToOOP.Characters.Melee
 {
     public class Warrior
@@ -7,6 +8,7 @@ namespace IntroductionToOOP.Characters.Melee
         private int hitPoints;
         private int level;
         private string name;
+        private Sword weapon;
 
         public int Damage {
             get
@@ -60,11 +62,21 @@ namespace IntroductionToOOP.Characters.Melee
             }
         }
 
+        public Sword Weapon {
+            get {
+                return this.weapon;
+            }
+            set {
+                this.Weapon = value;
+            }
+        }
+
         public Warrior(string name = "Warren", int hitPoints = 100, int damage = 10)
         {
             this.Damage = damage;
             this.HitPoints = hitPoints;
             this.Name = name;
+            this.Weapon = new Sword();
         }
 
         public void Greetings(string name)

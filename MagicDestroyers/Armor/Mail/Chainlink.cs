@@ -27,7 +27,7 @@ namespace MagicDestroyers.Armor.Mail
 
         public Chainlink()
         {
-
+            this.ArmorClass = 12;
         }
     }
 }

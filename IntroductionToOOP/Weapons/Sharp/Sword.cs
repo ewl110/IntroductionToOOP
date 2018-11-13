@@ -1,36 +1,34 @@
 ﻿using System;
 
-namespace MagicDestroyers.Weapons.Blunt
+namespace IntroductionToOOP.Weapons.Sharp
 {
-    class Hammer
+    public class Sword
     {
         private int damage;
 
         public int Damage {
-            get
-            {
+            get {
                 return this.damage;
             }
-            set
-            {
-                if (value > 0)
+            set {
+                if (value >= 1 && value <= 10)
                 {
                     this.damage = value;
                 }
                 else
                 {
-                    Console.WriteLine("Damage cannont be zero or negative.");
+                    this.damage = 1;
+                    Console.WriteLine("Damage should be between 1 - 10.");
                 }
             }
         }
 
-        public Hammer()
+        public Sword()
         {
-            this.Damage = 6;
+            this.Damage = 10;
         }
 
-        public void Stun()
-        {
+        public void Bloodthirst() {
             throw new NotImplementedException();
         }
     }

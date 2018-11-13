@@ -127,9 +127,15 @@
             }
         }
 
-        public Warrior()
+        public Warrior(string name, int level = 1, int hitPoints = 12)
         {
-
+            this.AbilityPoints = 6;
+            this.Armor = new Chainlink();
+            this.Faction = "Melee";
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+            this.Weapon = new Axe();
         }
 
         public void Execute()
