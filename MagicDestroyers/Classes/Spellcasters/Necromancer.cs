@@ -127,6 +127,28 @@
             }
         }
 
+        public Necromancer()
+        {
+            this.AbilityPoints = 14;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 8;
+            this.Level = 1;
+            this.Name = "Nathaniel";
+            this.Weapon = new Sword();
+        }
+
+        public Necromancer(string name)
+        {
+            this.AbilityPoints = 14;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 8;
+            this.Level = 1;
+            this.Name = name;
+            this.Weapon = new Sword();
+        }
+
         public Necromancer(string name, int level = 1, int hitPoints = 8)
         {
             this.AbilityPoints = 14;

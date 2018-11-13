@@ -127,6 +127,28 @@
             }
         }
 
+        public Druid()
+        {
+            this.AbilityPoints = 10;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 8;
+            this.Level = 1;
+            this.Name = "Diana";
+            this.Weapon = new Staff();
+        }
+
+        public Druid(string name)
+        {
+            this.AbilityPoints = 10;
+            this.Armor = new LeatherVest();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 8;
+            this.Level = 1;
+            this.Name = name;
+            this.Weapon = new Staff();
+        }
+
         public Druid(string name, int level = 1, int hitPoints = 8)
         {
             this.AbilityPoints = 10;

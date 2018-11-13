@@ -71,6 +71,21 @@ namespace IntroductionToOOP.Characters.Melee
             }
         }
 
+        public Warrior(){
+            this.Damage = 10;
+            this.HitPoints = 100;
+            this.Name = "Warren";
+            this.Weapon = new Sword();
+        }
+
+        public Warrior(string name)
+        {
+            this.Damage = 10;
+            this.HitPoints = 100;
+            this.Name = name;
+            this.Weapon = new Sword();
+        }
+
         public Warrior(string name = "Warren", int hitPoints = 100, int damage = 10)
         {
             this.Damage = damage;

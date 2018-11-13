@@ -127,6 +127,28 @@
             }
         }
 
+        public Mage()
+        {
+            this.AbilityPoints = 20;
+            this.Armor = new ClothRobe();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 6;
+            this.Level = 1;
+            this.Name = "Margaery";
+            this.Weapon = new Staff();
+        }
+
+        public Mage(string name)
+        {
+            this.AbilityPoints = 20;
+            this.Armor = new ClothRobe();
+            this.Faction = "Spellcasters";
+            this.HitPoints = 6;
+            this.Level = 1;
+            this.Name = name;
+            this.Weapon = new Staff();
+        }
+
         public Mage(string name, int level = 1, int hitPoints = 6)
         {
             this.AbilityPoints = 20;

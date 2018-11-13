@@ -10,7 +10,7 @@ namespace MagicDestroyers
         {
             Warrior warrior = new Warrior("Steven");
             Console.WriteLine(
-                $"Name: {warrior.Name} \nLevel: {warrior.Level} \nHP: {warrior.HitPoints} \nArmor: {warrior.Armor.ArmorClass} \nWeapon: {warrior.Weapon.Damage}"
+                $"Name: {warrior.Name} \nLevel: {warrior.Level} \nHP: {warrior.HitPoints} \nAbility Points: {warrior.AbilityPoints} \nArmor: {warrior.Armor.ArmorClass} \nWeapon: {warrior.Weapon.Damage}"
             );
             //int warriorDamage = warrior.Weapon.Damage;
         }

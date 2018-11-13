@@ -127,6 +127,28 @@
             }
         }
 
+        public Knight()
+        {
+            this.AbilityPoints = 2;
+            this.Armor = new Chainlink();
+            this.Faction = "Melee";
+            this.HitPoints = 10;
+            this.Level = 1;
+            this.Name = "Keira";
+            this.Weapon = new Hammer();
+        }
+
+        public Knight(string name)
+        {
+            this.AbilityPoints = 2;
+            this.Armor = new Chainlink();
+            this.Faction = "Melee";
+            this.HitPoints = 10;
+            this.Level = 1;
+            this.Name = name;
+            this.Weapon = new Hammer();
+        }
+
         public Knight(string name, int level = 1, int hitPoints = 10)
         {
             this.AbilityPoints = 2;
