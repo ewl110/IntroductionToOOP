@@ -45,14 +45,11 @@
 
         public Necromancer(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
-        public Necromancer(string name, int level, int hitPoints)
+        public Necromancer(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
             this.ManaPoints = DEFAULT_MANAPOINTS;
             this.Armor = DEFAULT_ARMOR;
             this.Faction = DEFAULT_FACTION;
-            this.HitPoints = hitPoints;
-            this.Level = level;
-            this.Name = name;
             this.Weapon = DEFAULT_WEAPON;
         }
 

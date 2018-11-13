@@ -24,5 +24,7 @@
                 }
             }
         }
+
+        protected Melee(string name, int level, int hitPoints) : base(name, level, hitPoints) {}
     }
 }

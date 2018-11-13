@@ -85,14 +85,35 @@
             }
         }
 
-        public Character()
+        protected Character()
+        {
+            this.id = this.createGuid();
+        }
+
+        protected Character(string name)
+        {
+            this.id = this.createGuid();
+        }
+
+        protected Character(string name, int level, int hitPoints)
+        {
+            this.id = this.createGuid();
+
+            this.HitPoints = hitPoints;
+            this.Level = level;
+            this.Name = name;
+        }
+
+        public Guid createGuid()
         {
             Guid id = Guid.Empty;
 
             if (id == Guid.Empty)
             {
-                this.id = Guid.NewGuid();
+                id = Guid.NewGuid();
             }
+
+            return id;
         }
     }
 }
