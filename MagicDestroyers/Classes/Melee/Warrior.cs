@@ -2,17 +2,17 @@
 {
     using MagicDestroyers.Armor.Mail;
     using MagicDestroyers.Weapons.Sharp;
+    using System;
 
     class Warrior
     {
         private int abilityPoints;
         private Chainlink armor;
         private string faction;
-        private int hp;
+        private int hitPoints;
         private int level;
         private string name;
         private Axe weapon;
-
 
         public int AbilityPoints
         {
@@ -22,7 +22,14 @@
             }
             set
             {
-                abilityPoints = value;
+                if (value > 1)
+                {
+                    abilityPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Ability points must be greater than 1.");
+                }
             }
         }
         public Chainlink Armor
@@ -44,18 +51,32 @@
             }
             set
             {
-                faction = value;
+                if (value.ToLower() == "melee" || value.ToLower() == "spellcasters")
+                {
+                    faction = value;
+                }
+                else
+                {
+                    Console.WriteLine("You must choose the \"Melee\" or \"Spellcasters\" faction.");
+                }
             }
         }
-        public int HP
+        public int HitPoints
         {
             get
             {
-                return hp;
+                return hitPoints;
             }
             set
             {
-                hp = value;
+                if (value >= 0)
+                {
+                    hitPoints = value;
+                }
+                else
+                {
+                    Console.WriteLine("Hit points cannot be a negative number.");
+                }
             }
         }
         public int Level
@@ -66,7 +87,14 @@
             }
             set
             {
-                level = value;
+                if (value >= 1 && value <= 100)
+                {
+                    level = value;
+                }
+                else
+                {
+                    Console.WriteLine("Level must be between 1 - 100.");
+                }
             }
         }
         public string Name
@@ -77,7 +105,14 @@
             }
             set
             {
-                name = value;
+                if (value.Length >= 2 && value.Length <= 10)
+                {
+                    name = value;
+                }
+                else
+                {
+                    Console.WriteLine("Character names must be between 2 - 10 characters long.");
+                }
             }
         }
         public Axe Weapon

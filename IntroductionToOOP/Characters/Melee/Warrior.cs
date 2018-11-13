@@ -4,7 +4,7 @@ namespace IntroductionToOOP.Characters.Melee
     public class Warrior
     {
         private int damage;
-        private int hp;
+        private int hitPoints;
         private int level;
         private string name;
 
@@ -18,14 +18,31 @@ namespace IntroductionToOOP.Characters.Melee
                 damage = value;
             }
         }
-        public int HP { get; set; }
-        public int Level { get; set; }
+        public int HitPoints { get; set; }
+        public int Level
+        {
+            get
+            {
+                return level;
+            }
+            set
+            {
+                if (value >= 1 && value <= 100)
+                {
+                    level = value;
+                }
+                else
+                {
+                    Console.WriteLine("Level must be between 1 and 100. Default level of 1 was set.");
+                }
+            }
+        }
         public string Name { get; set; }
 
-        public Warrior(string name = "Warren", int hp = 100, int damage = 10)
+        public Warrior(string name = "Warren", int hitPoints = 100, int damage = 10)
         {
             Damage = damage;
-            HP = hp;
+            HitPoints = hitPoints;
             Name = name;
         }
 
@@ -36,8 +53,8 @@ namespace IntroductionToOOP.Characters.Melee
 
         public void Attack(Warrior enemy)
         {
-            enemy.HP -= Damage;
-            Console.WriteLine($"{Name} is attacking {enemy.Name}. {enemy.Name} now has {enemy.HP} HP remaining.");
+            enemy.HitPoints -= Damage;
+            Console.WriteLine($"{Name} is attacking {enemy.Name}. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
         }
     }
 }

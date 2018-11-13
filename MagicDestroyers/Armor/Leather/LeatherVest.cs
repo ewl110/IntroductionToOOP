@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Armor.Leather
+﻿using System;
+
+namespace MagicDestroyers.Armor.Leather
 {
     class LeatherVest
     {
@@ -12,7 +14,14 @@
             }
             set
             {
-                armorClass = value;
+                if (value > 1)
+                {
+                    armorClass = value;
+                }
+                else
+                {
+                    Console.WriteLine("Armor must be greater than 1.");
+                }
             }
         }
 

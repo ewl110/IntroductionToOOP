@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Armor.Cloth
+﻿using System;
+
+namespace MagicDestroyers.Armor.Cloth
 {
     class ClothRobe
     {
@@ -11,7 +13,14 @@
             }
             set
             {
-                armorClass = value;
+                if (value > 1)
+                {
+                    armorClass = value;
+                }
+                else
+                {
+                    Console.WriteLine("Armor must be greater than 1.");
+                }
             }
         }
 
