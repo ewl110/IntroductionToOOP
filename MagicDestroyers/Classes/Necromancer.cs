@@ -26,6 +26,11 @@ namespace MagicDestroyers.Classes
         public string Name { get; set; }
         public Sword Weapon { get; set; }
 
+        public Necromancer()
+        {
+
+        }
+
         public void BoneShield() { }
 
         public void ShadowRage() { }

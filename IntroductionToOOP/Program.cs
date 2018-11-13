@@ -10,17 +10,9 @@ namespace IntroductionToOOP
     {
         static void Main()
         {
-            Warrior hero = new Warrior();
-            hero.Damage = 6;
-            hero.HP = 12;
-            hero.Level = 1;
-            hero.Name = "Greg";
+            Warrior hero = new Warrior("Bob");
 
-            Warrior villain = new Warrior();
-            villain.Damage = 3;
-            villain.HP = 6;
-            villain.Level = 1;
-            villain.Name = "Gob";
+            Warrior villain = new Warrior("Gob");
 
             hero.Greetings(villain.Name);
 

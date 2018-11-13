@@ -11,5 +11,10 @@ namespace MagicDestroyers.Armor
         private int armorClass;
 
         public int ArmorClass { get; set; }
+
+        public ClothRobe()
+        {
+             
+        }
     }
 }

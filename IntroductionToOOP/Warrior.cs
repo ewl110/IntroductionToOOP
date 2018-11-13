@@ -12,6 +12,13 @@
     public int Level { get; set; }
     public string Name { get; set; }
 
+    public Warrior( string name = "Warren", int hp = 100, int damage = 10 )
+    {
+        Damage = damage;
+        HP = hp;
+        Name = name;
+    }
+
     public void Greetings(string name) {
         Console.WriteLine($"{Name} greets {name}.");
     }

@@ -26,6 +26,11 @@ namespace MagicDestroyers.Classes
         public string Name { get; set; }
         public Staff Weapon { get; set; }
 
+        public Mage()
+        {
+
+        }
+
         public void ArcaneWrath() { }
 
         public void Firewall() { }

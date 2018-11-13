@@ -12,6 +12,11 @@ namespace MagicDestroyers.Weapons
 
         public int Damage { get; set; }
 
+        public Staff()
+        {
+
+        }
+
         public void Empower() { }
     }
 }

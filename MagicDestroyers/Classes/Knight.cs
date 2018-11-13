@@ -26,6 +26,11 @@ namespace MagicDestroyers.Classes
         public string Name { get; set; }
         public Hammer Weapon { get; set; }
 
+        public Knight()
+        {
+
+        }
+
         public void HolyBlow() { }
 
         public void PurifySoul() { }

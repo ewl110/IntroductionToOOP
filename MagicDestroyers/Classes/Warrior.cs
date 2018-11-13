@@ -26,6 +26,11 @@ namespace MagicDestroyers.Classes
         public string Name { get; set; }
         public Axe Weapon { get; set; }
 
+        public Warrior()
+        {
+
+        }
+
         public void Execute() { }
 
         public void SkinHarden() { }

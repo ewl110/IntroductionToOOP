@@ -12,6 +12,11 @@ namespace MagicDestroyers.Weapons
 
         public int Damage { get; set; }
 
+        public Hammer()
+        {
+
+        }
+
         public void Stun() { }
     }
 }
