@@ -1,7 +1,7 @@
 ﻿using System;
-namespace IntroductionToOOP.Characters.Magic
+namespace IntroductionToOOP.Characters.Spellcasters
 {
-    public class Wizard
+    public class Mage
     {
         public int damage;
         public int hp;

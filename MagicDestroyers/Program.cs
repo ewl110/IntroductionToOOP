@@ -2,7 +2,7 @@
 
 namespace MagicDestroyers
 {
-    using MagicDestroyers.Classes.Melee;
+    using MagicDestroyers.Characters.Melee;
 
     class Program
     {
