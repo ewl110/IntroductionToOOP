@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using IntroductionToOOP.Characters.Melee;
 
 namespace IntroductionToOOP
 {
@@ -10,14 +7,11 @@ namespace IntroductionToOOP
     {
         static void Main()
         {
-            Warrior hero = new Warrior("Bob");
-
-            Warrior villain = new Warrior("Gob");
+            Warrior hero = new Warrior("Bob", 70, 12);
+            Warrior villain = new Warrior("Gob", 100, 6);
 
             hero.Greetings(villain.Name);
-
             hero.Attack(villain);
-
             villain.Attack(hero);
         }
     }

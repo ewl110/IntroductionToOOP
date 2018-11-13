@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Weapons
+namespace MagicDestroyers.Weapons.Blunt
 {
-    class Sword
+    class Staff
     {
         private int damage;
 
         public int Damage { get; set; }
 
-        public Sword()
+        public Staff()
         {
 
         }
 
-        public void Bloodthirst() { }
+        public void Empower() { }
     }
 }

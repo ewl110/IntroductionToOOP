@@ -1,4 +1,4 @@
-﻿using MagicDestroyers.Armor;
+﻿using MagicDestroyers.Armor.Mail;
 using MagicDestroyers.Weapons;
 using System;
 using System.Collections.Generic;
@@ -6,35 +6,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Classes
+namespace MagicDestroyers.Classes.Melee
 {
-    class Necromancer
+    class Warrior
     {
         private int abilityPoints;
-        private LeatherVest armor;
+        private Chainlink armor;
         private string faction;
         private int hp;
         private int level;
         private string name;
-        private Sword weapon;
+        private Axe weapon;
 
         public int AbilityPoints { get; set; }
-        public LeatherVest Armor { get; set; }
+        public Chainlink Armor { get; set; }
         public string Faction { get; set; }
         public int HP { get; set; }
         public int Level { get; set; }
         public string Name { get; set; }
-        public Sword Weapon { get; set; }
+        public Axe Weapon { get; set; }
 
-        public Necromancer()
+        public Warrior()
         {
 
         }
 
-        public void BoneShield() { }
+        public void Execute() { }
 
-        public void ShadowRage() { }
+        public void SkinHarden() { }
 
-        public void VampireTouch() { }
+        public void Strike(){}
     }
 }

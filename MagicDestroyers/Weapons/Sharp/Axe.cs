@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Weapons
+namespace MagicDestroyers.Weapons.Axe
 {
-    class Staff
+    class Axe
     {
         private int damage;
 
         public int Damage { get; set; }
 
-        public Staff()
+        public Axe()
         {
 
         }
 
-        public void Empower() { }
+        public void HackNSlash() { }
     }
 }

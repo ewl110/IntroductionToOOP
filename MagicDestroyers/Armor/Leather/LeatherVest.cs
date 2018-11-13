@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Armor
+namespace MagicDestroyers.Armor.Leather
 {
-    class Chainlink
+    class LeatherVest
     {
         private int armorClass;
 
         public int ArmorClass { get; set; }
 
-        public Chainlink()
+        public LeatherVest()
         {
 
         }
