@@ -25,5 +25,11 @@ namespace MagicDestroyers.Classes
         public int Level { get; set; }
         public string Name { get; set; }
         public Sword Weapon { get; set; }
+
+        public void Bleed() { }
+
+        public void Raze() { }
+
+        public void Survival() { }
     }
 }

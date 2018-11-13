@@ -25,5 +25,11 @@ namespace MagicDestroyers.Classes
         public int Level { get; set; }
         public string Name { get; set; }
         public Staff Weapon { get; set; }
+
+        public void Moonfire() { }
+
+        public void OneWithNature() { }
+
+        public void Starburst() { }
     }
 }

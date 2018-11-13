@@ -16,11 +16,17 @@ namespace IntroductionToOOP
             hero.Level = 1;
             hero.Name = "Greg";
 
-            Wizard villain = new Wizard();
-            villain.damage = 3;
-            villain.hp = 6;
-            villain.level = 1;
-            villain.name = "Gob";
+            Warrior villain = new Warrior();
+            villain.Damage = 3;
+            villain.HP = 6;
+            villain.Level = 1;
+            villain.Name = "Gob";
+
+            hero.Greetings(villain.Name);
+
+            hero.Attack(villain);
+
+            villain.Attack(hero);
         }
     }
 }

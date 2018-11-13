@@ -47,7 +47,6 @@
     <Compile Include="Armor\ClothRobe.cs" />
     <Compile Include="Armor\LeatherVest.cs" />
     <Compile Include="Classes\Assassin.cs" />
-    <Compile Include="Classes\Chainllink.cs" />
     <Compile Include="Classes\Druid.cs" />
     <Compile Include="Classes\Knight.cs" />
     <Compile Include="Classes\Mage.cs" />

@@ -25,5 +25,11 @@ namespace MagicDestroyers.Classes
         public int Level { get; set; }
         public string Name { get; set; }
         public Axe Weapon { get; set; }
+
+        public void Execute() { }
+
+        public void SkinHarden() { }
+
+        public void Strike(){}
     }
 }
