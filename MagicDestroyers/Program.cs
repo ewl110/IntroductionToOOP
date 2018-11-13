@@ -1,16 +1,15 @@
-﻿using MagicDestroyers.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace MagicDestroyers
 {
+    using MagicDestroyers.Classes.Melee;
+
     class Program
     {
-
-        Warrior warrior = new Warrior();
-        //int warriorDamage = warrior.Weapon.Damage;
+        static void Main()
+        {
+            Warrior warrior = new Warrior();
+            //int warriorDamage = warrior.Weapon.Damage;
+        }
     }
 }

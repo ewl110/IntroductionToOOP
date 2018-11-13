@@ -1,13 +1,8 @@
-﻿using MagicDestroyers.Armor.Leather;
-using MagicDestroyers.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MagicDestroyers.Classes.Spellcasters
+﻿namespace MagicDestroyers.Classes.Spellcasters
 {
+    using MagicDestroyers.Armor.Leather;
+    using MagicDestroyers.Weapons.Sharp;
+
     class Necromancer
     {
         private int abilityPoints;

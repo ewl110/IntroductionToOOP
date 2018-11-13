@@ -1,13 +1,8 @@
-﻿using MagicDestroyers.Armor.Cloth;
-using MagicDestroyers.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MagicDestroyers.Classes.Spellcasters
+﻿namespace MagicDestroyers.Classes.Spellcasters
 {
+    using MagicDestroyers.Armor.Cloth;
+    using MagicDestroyers.Weapons.Blunt;
+
     class Mage
     {
         private int abilityPoints;

@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace MagicDestroyers.Armor.Cloth
+﻿namespace MagicDestroyers.Armor.Cloth
 {
     class ClothRobe
     {
