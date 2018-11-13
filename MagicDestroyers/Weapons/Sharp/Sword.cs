@@ -2,30 +2,9 @@
 
 namespace MagicDestroyers.Weapons.Sharp
 {
-    class Sword
+    class Sword : Sharp
     {
         private const int DEFAULT_DAMAGE = 6;
-
-        private int damage;
-
-        public int Damage
-        {
-            get
-            {
-                return this.damage;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    this.damage = value;
-                }
-                else
-                {
-                    Console.WriteLine("Damage cannont be zero or negative.");
-                }
-            }
-        }
 
         public Sword()
         {

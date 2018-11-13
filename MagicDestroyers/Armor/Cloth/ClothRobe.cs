@@ -2,31 +2,13 @@
 
 namespace MagicDestroyers.Armor.Cloth
 {
-    class ClothRobe
+    class ClothRobe : Cloth
     {
-        private int armorClass;
-
-        public int ArmorClass {
-            get
-            {
-                return this.armorClass;
-            }
-            set
-            {
-                if (value > 1)
-                {
-                    this.armorClass = value;
-                }
-                else
-                {
-                    Console.WriteLine("Armor must be greater than 1.");
-                }
-            }
-        }
+        private const int DEFAULT_ARMORCLASS = 10;
 
         public ClothRobe()
         {
-            this.ArmorClass = 10;
+            this.ArmorClass = DEFAULT_ARMORCLASS;
         }
     }
 }

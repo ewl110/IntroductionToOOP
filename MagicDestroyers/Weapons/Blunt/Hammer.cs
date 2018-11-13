@@ -2,29 +2,11 @@
 
 namespace MagicDestroyers.Weapons.Blunt
 {
-    class Hammer
+    class Hammer : Blunt
     {
         private const int DEFAULT_DAMAGE = 6;
 
         private int damage;
-
-        public int Damage {
-            get
-            {
-                return this.damage;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    this.damage = value;
-                }
-                else
-                {
-                    Console.WriteLine("Damage cannont be zero or negative.");
-                }
-            }
-        }
 
         public Hammer()
         {

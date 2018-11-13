@@ -1,33 +1,14 @@
-﻿using System;
-
-namespace MagicDestroyers.Armor.Mail
+﻿namespace MagicDestroyers.Armor.Mail
 {
-    class Chainlink
-    {
-        private int armorClass;
+    using System;
 
-        public int ArmorClass
-        {
-            get
-            {
-                return this.armorClass;
-            }
-            set
-            {
-                if (value > 1)
-                {
-                    this.armorClass = value;
-                }
-                else
-                {
-                    Console.WriteLine("Armor must be greater than 1.");
-                }
-            }
-        }
+    class Chainlink : Mail
+    {
+        private const int DEFAULT_ARMORCLASS = 12;
 
         public Chainlink()
         {
-            this.ArmorClass = 12;
+            this.ArmorClass = DEFAULT_ARMORCLASS;
         }
     }
 }

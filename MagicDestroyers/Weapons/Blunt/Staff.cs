@@ -2,30 +2,9 @@
 
 namespace MagicDestroyers.Weapons.Blunt
 {
-    class Staff
+    class Staff : Blunt
     {
         private const int DEFAULT_DAMAGE = 4;
-
-        private int damage;
-
-        public int Damage
-        {
-            get
-            {
-                return this.damage;
-            }
-            set
-            {
-                if (value > 0)
-                {
-                    this.damage = value;
-                }
-                else
-                {
-                    Console.WriteLine("Damage cannont be zero or negative.");
-                }
-            }
-        }
 
         public Staff()
         {
