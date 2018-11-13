@@ -6,6 +6,14 @@
 
     class Warrior
     {
+        private const int DEFAULT_ABILITYPOINTS = 6;
+        private readonly Chainlink DEFAULT_ARMOR = new Chainlink();
+        private const string DEFAULT_FACTION = "Melee";
+        private const int DEFAULT_HITPOINTS = 10;
+        private const int DEFAULT_LEVEL = 1;
+        private const string DEFAULT_NAME = "Warren";
+        private readonly Axe DEFAULT_WEAPON = new Axe();
+
         private int abilityPoints;
         private Chainlink armor;
         private string faction;
@@ -127,19 +135,19 @@
             }
         }
 
-        public Warrior() : this("Warren") { }
+        public Warrior() : this(DEFAULT_NAME) { }
 
-        public Warrior(string name) : this(name, 1, 10) { }
+        public Warrior(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
         public Warrior(string name, int level, int hitPoints)
         {
-            this.AbilityPoints = 6;
-            this.Armor = new Chainlink();
-            this.Faction = "Melee";
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Armor = DEFAULT_ARMOR;
+            this.Faction = DEFAULT_FACTION;
             this.HitPoints = hitPoints;
             this.Level = level;
             this.Name = name;
-            this.Weapon = new Axe();
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void Execute()

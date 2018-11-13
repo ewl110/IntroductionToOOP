@@ -4,22 +4,16 @@ namespace IntroductionToOOP.Characters.Melee
 {
     public class Warrior
     {
-        private int damage;
+        private const int DEFAULT_HITPOINTS =100;
+        private const string DEFAULT_NAME = "Warren";
+
+        public readonly Guid id;
+
         private int hitPoints;
         private int level;
         private string name;
         private Sword weapon;
 
-        public int Damage {
-            get
-            {
-                return this.damage;
-            }
-            set
-            {
-                this.damage = value;
-            }
-        }
         public int HitPoints
         {
             get
@@ -29,6 +23,11 @@ namespace IntroductionToOOP.Characters.Melee
             set
             {
                 this.hitPoints = value;
+            }
+        }
+        public Guid Id {
+            get {
+                return this.id;
             }
         }
         public int Level
@@ -67,17 +66,23 @@ namespace IntroductionToOOP.Characters.Melee
                 return this.weapon;
             }
             set {
-                this.Weapon = value;
+                this.weapon = new Sword();
             }
         }
 
-        public Warrior() : this("Warren") {}
+        public Warrior() : this(DEFAULT_NAME) {}
 
-        public Warrior(string name) : this(name, 100, 10) {}
+        public Warrior(string name) : this(name, DEFAULT_HITPOINTS) {}
 
-        public Warrior(string name, int hitPoints, int damage)
+        public Warrior(string name, int hitPoints)
         {
-            this.Damage = damage;
+            Guid id = Guid.Empty;
+
+            if (id == Guid.Empty)
+            {
+                this.id = Guid.NewGuid();
+            }
+
             this.HitPoints = hitPoints;
             this.Name = name;
             this.Weapon = new Sword();
@@ -90,8 +95,8 @@ namespace IntroductionToOOP.Characters.Melee
 
         public void Attack(Warrior enemy)
         {
-            enemy.HitPoints -= Damage;
-            Console.WriteLine($"{this.name} is attacking {enemy.Name}. {this.name} does {this.damage} damage. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
+            enemy.HitPoints -= this.weapon.Damage;
+            Console.WriteLine($"{this.name} is attacking {enemy.Name}. {this.name} does {this.weapon.Damage} damage. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
         }
 
         public void Strike(Warrior enemy)

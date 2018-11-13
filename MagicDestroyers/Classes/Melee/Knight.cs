@@ -6,6 +6,14 @@
 
     class Knight
     {
+        private const int DEFAULT_ABILITYPOINTS = 2;
+        private readonly Chainlink DEFAULT_ARMOR = new Chainlink();
+        private const string DEFAULT_FACTION = "Melee";
+        private const int DEFAULT_HITPOINTS = 10;
+        private const int DEFAULT_LEVEL = 1;
+        private const string DEFAULT_NAME = "Keira";
+        private readonly Hammer DEFAULT_WEAPON = new Hammer();
+
         private int abilityPoints;
         private Chainlink armor;
         private string faction;
@@ -127,19 +135,19 @@
             }
         }
 
-        public Knight() : this("Keira") { }
+        public Knight() : this(DEFAULT_NAME) { }
 
-        public Knight(string name) : this(name, 1, 10) { }
+        public Knight(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
         public Knight(string name, int level, int hitPoints)
         {
-            this.AbilityPoints = 2;
-            this.Armor = new Chainlink();
-            this.Faction = "Melee";
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Armor = DEFAULT_ARMOR;
+            this.Faction = DEFAULT_FACTION;
             this.HitPoints = hitPoints;
             this.Level = level;
             this.Name = name;
-            this.Weapon = new Hammer();
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void HolyBlow()

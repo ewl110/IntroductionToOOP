@@ -4,6 +4,8 @@ namespace MagicDestroyers.Weapons.Blunt
 {
     class Hammer
     {
+        private const int DEFAULT_DAMAGE = 6;
+
         private int damage;
 
         public int Damage {
@@ -26,7 +28,7 @@ namespace MagicDestroyers.Weapons.Blunt
 
         public Hammer()
         {
-            this.Damage = 6;
+            this.Damage = DEFAULT_DAMAGE;
         }
 
         public void Stun()

@@ -6,29 +6,32 @@ namespace IntroductionToOOP.Weapons.Sharp
     {
         private int damage;
 
-        public int Damage {
-            get {
+        public int Damage
+        {
+            get
+            {
                 return this.damage;
             }
-            set {
-                if (value >= 1 && value <= 10)
+            set
+            {
+                if (value > 0)
                 {
                     this.damage = value;
                 }
                 else
                 {
-                    this.damage = 1;
-                    Console.WriteLine("Damage should be between 1 - 10.");
+                    Console.WriteLine("Damage cannont be zero or negative.");
                 }
             }
         }
 
         public Sword()
         {
-            this.Damage = 10;
+            this.Damage = 6;
         }
 
-        public void Bloodthirst() {
+        public void Bloodthirst()
+        {
             throw new NotImplementedException();
         }
     }

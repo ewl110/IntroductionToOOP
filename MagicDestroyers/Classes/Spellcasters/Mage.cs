@@ -6,6 +6,14 @@
 
     class Mage
     {
+        private const int DEFAULT_ABILITYPOINTS = 20;
+        private readonly ClothRobe DEFAULT_ARMOR = new ClothRobe();
+        private const string DEFAULT_FACTION = "Spellcasters";
+        private const int DEFAULT_HITPOINTS = 6;
+        private const int DEFAULT_LEVEL = 1;
+        private const string DEFAULT_NAME = "Margeary";
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+
         private int abilityPoints;
         private ClothRobe armor;
         private string faction;
@@ -127,19 +135,19 @@
             }
         }
 
-        public Mage() : this("Margaery") { }
+        public Mage() : this(DEFAULT_NAME) { }
 
-        public Mage(string name) : this(name, 1, 6) { }
+        public Mage(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
-        public Mage(string name, int level = 1, int hitPoints = 6)
+        public Mage(string name, int level, int hitPoint)
         {
-            this.AbilityPoints = 20;
-            this.Armor = new ClothRobe();
-            this.Faction = "Spellcasters";
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Armor = DEFAULT_ARMOR;
+            this.Faction = DEFAULT_FACTION;
             this.HitPoints = hitPoints;
             this.Level = level;
             this.Name = name;
-            this.Weapon = new Staff();
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void ArcaneWrath()

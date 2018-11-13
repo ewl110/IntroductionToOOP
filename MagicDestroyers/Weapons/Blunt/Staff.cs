@@ -4,6 +4,8 @@ namespace MagicDestroyers.Weapons.Blunt
 {
     class Staff
     {
+        private const int DEFAULT_DAMAGE = 4;
+
         private int damage;
 
         public int Damage
@@ -27,7 +29,7 @@ namespace MagicDestroyers.Weapons.Blunt
 
         public Staff()
         {
-            this.Damage = 4;
+            this.Damage = DEFAULT_DAMAGE;
         }
 
         public void Empower()

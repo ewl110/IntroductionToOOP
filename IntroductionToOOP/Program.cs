@@ -7,8 +7,11 @@ namespace IntroductionToOOP
     {
         static void Main()
         {
-            Warrior hero = new Warrior("Bob", 70, 12);
-            Warrior villain = new Warrior("Gob", 100, 6);
+            Warrior hero = new Warrior("Bob");
+            Warrior villain = new Warrior("Gob");
+
+            Console.WriteLine(hero.Id);
+            Console.WriteLine(villain.Id);
 
             hero.Greetings(villain.Name);
             hero.Attack(villain);

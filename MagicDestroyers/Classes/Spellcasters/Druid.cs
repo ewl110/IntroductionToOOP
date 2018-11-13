@@ -6,6 +6,14 @@
 
     class Druid
     {
+        private const int DEFAULT_ABILITYPOINTS = 10;
+        private readonly LeatherVest DEFAULT_ARMOR = new LeatherVest();
+        private const string DEFAULT_FACTION = "Spellcasters";
+        private const int DEFAULT_HITPOINTS = 8;
+        private const int DEFAULT_LEVEL = 1;
+        private const string DEFAULT_NAME = "Diana";
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+
         private int abilityPoints;
         private LeatherVest armor;
         private string faction;
@@ -127,19 +135,19 @@
             }
         }
 
-        public Druid() : this("Diana") { }
+        public Druid() : this(DEFAULT_NAME) { }
 
-        public Druid(string name) : this(name, 1, 8) { }
+        public Druid(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
-        public Druid(string name, int level = 1, int hitPoints = 8)
+        public Druid(string name, int level, int hitPoints)
         {
-            this.AbilityPoints = 10;
-            this.Armor = new LeatherVest();
-            this.Faction = "Spellcasters";
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Armor = DEFAULT_ARMOR;
+            this.Faction = DEFAULT_FACTION;
             this.HitPoints = hitPoints;
             this.Level = level;
             this.Name = name;
-            this.Weapon = new Staff();
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void Moonfire()
