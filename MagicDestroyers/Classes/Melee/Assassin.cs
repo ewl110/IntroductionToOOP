@@ -127,29 +127,11 @@
             }
         }
 
-        public Assassin()
-        {
-            this.AbilityPoints = 4;
-            this.Armor = new LeatherVest();
-            this.Faction = "Melee";
-            this.HitPoints = 8;
-            this.Level = 1;
-            this.Name = "Adam";
-            this.Weapon = new Sword();
-        }
+        public Assassin() : this("Adam") { }
 
-        public Assassin(string name)
-        {
-            this.AbilityPoints = 4;
-            this.Armor = new LeatherVest();
-            this.Faction = "Melee";
-            this.HitPoints = 8;
-            this.Level = 1;
-            this.Name = name;
-            this.Weapon = new Sword();
-        }
+        public Assassin(string name) : this(name, 1, 8) { }
 
-        public Assassin(string name, int level = 1, int hitPoints = 8)
+        public Assassin(string name, int level, int hitPoints)
         {
             this.AbilityPoints = 4;
             this.Armor = new LeatherVest();

@@ -127,29 +127,11 @@
             }
         }
 
-        public Warrior()
-        {
-            this.AbilityPoints = 6;
-            this.Armor = new Chainlink();
-            this.Faction = "Melee";
-            this.HitPoints = 10;
-            this.Level = 1;
-            this.Name = "Warren";
-            this.Weapon = new Axe();
-        }
+        public Warrior() : this("Warren") { }
 
-        public Warrior(string name)
-        {
-            this.AbilityPoints = 6;
-            this.Armor = new Chainlink();
-            this.Faction = "Melee";
-            this.HitPoints = 10;
-            this.Level = 1;
-            this.Name = name;
-            this.Weapon = new Axe();
-        }
+        public Warrior(string name) : this(name, 1, 10) { }
 
-        public Warrior(string name, int level = 1, int hitPoints = 10)
+        public Warrior(string name, int level, int hitPoints)
         {
             this.AbilityPoints = 6;
             this.Armor = new Chainlink();
