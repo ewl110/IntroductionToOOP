@@ -53,6 +53,8 @@
     <Compile Include="Classes\Spellcasters\Mage.cs" />
     <Compile Include="Classes\Spellcasters\Necromancer.cs" />
     <Compile Include="Classes\Melee\Warrior.cs" />
+    <Compile Include="Enumerations\Factions.cs" />
+    <Compile Include="InfoHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapons\Sharp\Axe.cs" />

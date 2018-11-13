@@ -1,6 +1,7 @@
 ﻿namespace MagicDestroyers.Classes.Spellcasters
 {
     using MagicDestroyers.Armor.Cloth;
+    using MagicDestroyers.Enumerations;
     using MagicDestroyers.Weapons.Blunt;
     using System;
 
@@ -8,7 +9,7 @@
     {
         private const int DEFAULT_ABILITYPOINTS = 20;
         private readonly ClothRobe DEFAULT_ARMOR = new ClothRobe();
-        private const string DEFAULT_FACTION = "Spellcasters";
+        private const Factions DEFAULT_FACTION = Factions.Spellcasters;
         private const int DEFAULT_HITPOINTS = 6;
         private const int DEFAULT_LEVEL = 1;
         private const string DEFAULT_NAME = "Margeary";
@@ -16,7 +17,7 @@
 
         private int abilityPoints;
         private ClothRobe armor;
-        private string faction;
+        private Factions faction;
         private int hitPoints;
         private int level;
         private string name;
@@ -51,7 +52,7 @@
                 this.armor = value;
             }
         }
-        public string Faction
+        public Factions Faction
         {
             get
             {
@@ -59,14 +60,7 @@
             }
             set
             {
-                if (value.ToLower() == "melee" || value.ToLower() == "spellcasters")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    Console.WriteLine("You must choose the \"Melee\" or \"Spellcasters\" faction.");
-                }
+                this.faction = value;
             }
         }
         public int HitPoints

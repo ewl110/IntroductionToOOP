@@ -1,19 +1,31 @@
-﻿using IntroductionToOOP.Weapons.Sharp;
+﻿using IntroductionToOOP.Enumerations;
+using IntroductionToOOP.Weapons.Sharp;
 using System;
 namespace IntroductionToOOP.Characters.Melee
 {
     public class Warrior
     {
-        private const int DEFAULT_HITPOINTS =100;
+        private const int DEFAULT_HITPOINTS = 100;
         private const string DEFAULT_NAME = "Warren";
 
         public readonly Guid id;
 
+        private Factions faction;
         private int hitPoints;
         private int level;
         private string name;
         private Sword weapon;
 
+        public Factions Faction {
+            get
+            {
+                return this.faction;
+            }
+            set
+            {
+                this.faction = value;
+            }
+        }
         public int HitPoints
         {
             get
@@ -102,6 +114,14 @@ namespace IntroductionToOOP.Characters.Melee
         public void Strike(Warrior enemy)
         {
             throw new NotImplementedException();
+        }
+
+        public static void GetAllDefaultInformation()
+        {
+            Console.WriteLine(
+                $"Default Name is: {DEFAULT_NAME}" + 
+                $"\nDefault HitPoints: {DEFAULT_HITPOINTS}"
+            );
         }
     }
 }

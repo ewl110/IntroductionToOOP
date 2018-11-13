@@ -13,6 +13,8 @@ namespace IntroductionToOOP
             Console.WriteLine(hero.Id);
             Console.WriteLine(villain.Id);
 
+            Warrior.GetAllDefaultInformation();
+
             hero.Greetings(villain.Name);
             hero.Attack(villain);
             villain.Attack(hero);

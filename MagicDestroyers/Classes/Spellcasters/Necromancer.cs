@@ -1,6 +1,7 @@
 ﻿namespace MagicDestroyers.Classes.Spellcasters
 {
     using MagicDestroyers.Armor.Leather;
+    using MagicDestroyers.Enumerations;
     using MagicDestroyers.Weapons.Sharp;
     using System;
 
@@ -8,7 +9,7 @@
     {
         private const int DEFAULT_ABILITYPOINTS = 14;
         private readonly LeatherVest DEFAULT_ARMOR = new LeatherVest();
-        private const string DEFAULT_FACTION = "Spellcasters";
+        private const Factions DEFAULT_FACTION = Factions.Spellcasters;
         private const int DEFAULT_HITPOINTS = 8;
         private const int DEFAULT_LEVEL = 1;
         private const string DEFAULT_NAME = "Nathaniel";
@@ -16,7 +17,7 @@
 
         private int abilityPoints;
         private LeatherVest armor;
-        private string faction;
+        private Factions faction;
         private int hitPoints;
         private int level;
         private string name;
@@ -51,7 +52,7 @@
                 this.armor = value;
             }
         }
-        public string Faction
+        public Factions Faction
         {
             get
             {
@@ -59,14 +60,7 @@
             }
             set
             {
-                if (value.ToLower() == "melee" || value.ToLower() == "spellcasters")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    Console.WriteLine("You must choose the \"Melee\" or \"Spellcasters\" faction.");
-                }
+                this.faction = value;
             }
         }
         public int HitPoints
