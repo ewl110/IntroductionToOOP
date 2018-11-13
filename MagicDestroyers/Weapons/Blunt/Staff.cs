@@ -10,13 +10,13 @@ namespace MagicDestroyers.Weapons.Blunt
         {
             get
             {
-                return damage;
+                return this.damage;
             }
             set
             {
                 if (value > 0)
                 {
-                    damage = value;
+                    this.damage = value;
                 }
                 else
                 {

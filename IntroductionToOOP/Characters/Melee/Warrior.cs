@@ -11,25 +11,35 @@ namespace IntroductionToOOP.Characters.Melee
         public int Damage {
             get
             {
-                return damage;
+                return this.damage;
             }
             set
             {
-                damage = value;
+                this.damage = value;
             }
         }
-        public int HitPoints { get; set; }
+        public int HitPoints
+        {
+            get
+            {
+                return this.hitPoints;
+            }
+            set
+            {
+                this.hitPoints = value;
+            }
+        }
         public int Level
         {
             get
             {
-                return level;
+                return this.level;
             }
             set
             {
                 if (value >= 1 && value <= 100)
                 {
-                    level = value;
+                    this.level = value;
                 }
                 else
                 {
@@ -39,24 +49,33 @@ namespace IntroductionToOOP.Characters.Melee
                 }
             }
         }
-        public string Name { get; set; }
+        public string Name {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                this.name = value;
+            }
+        }
 
         public Warrior(string name = "Warren", int hitPoints = 100, int damage = 10)
         {
-            Damage = damage;
-            HitPoints = hitPoints;
-            Name = name;
+            this.Damage = damage;
+            this.HitPoints = hitPoints;
+            this.Name = name;
         }
 
         public void Greetings(string name)
         {
-            Console.WriteLine($"{Name} greets {name}.");
+            Console.WriteLine($"{this.name} greets {name}.");
         }
 
         public void Attack(Warrior enemy)
         {
             enemy.HitPoints -= Damage;
-            Console.WriteLine($"{Name} is attacking {enemy.Name}. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
+            Console.WriteLine($"{this.name} is attacking {enemy.Name}. {this.name} does {this.damage} damage. {enemy.Name} now has {enemy.HitPoints} HP remaining.");
         }
 
         public void Strike(Warrior enemy)

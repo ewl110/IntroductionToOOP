@@ -18,13 +18,13 @@
         {
             get
             {
-                return abilityPoints;
+                return this.abilityPoints;
             }
             set
             {
                 if (value > 1)
                 {
-                    abilityPoints = value;
+                    this.abilityPoints = value;
                 }
                 else
                 {
@@ -36,24 +36,24 @@
         {
             get
             {
-                return armor;
+                return this.armor;
             }
             set
             {
-                armor = value;
+                this.armor = value;
             }
         }
         public string Faction
         {
             get
             {
-                return faction;
+                return this.faction;
             }
             set
             {
                 if (value.ToLower() == "melee" || value.ToLower() == "spellcasters")
                 {
-                    faction = value;
+                    this.faction = value;
                 }
                 else
                 {
@@ -65,13 +65,13 @@
         {
             get
             {
-                return hitPoints;
+                return this.hitPoints;
             }
             set
             {
                 if (value >= 0)
                 {
-                    hitPoints = value;
+                    this.hitPoints = value;
                 }
                 else
                 {
@@ -83,13 +83,13 @@
         {
             get
             {
-                return level;
+                return this.level;
             }
             set
             {
                 if (value >= 1 && value <= 100)
                 {
-                    level = value;
+                    this.level = value;
                 }
                 else
                 {
@@ -101,13 +101,13 @@
         {
             get
             {
-                return name;
+                return this.name;
             }
             set
             {
                 if (value.Length >= 2 && value.Length <= 10)
                 {
-                    name = value;
+                    this.name = value;
                 }
                 else
                 {
@@ -119,11 +119,11 @@
         {
             get
             {
-                return weapon;
+                return this.weapon;
             }
             set
             {
-                weapon = value;
+                this.weapon = value;
             }
         }
 

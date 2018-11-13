@@ -10,13 +10,13 @@ namespace MagicDestroyers.Armor.Mail
         {
             get
             {
-                return armorClass;
+                return this.armorClass;
             }
             set
             {
                 if (value > 1)
                 {
-                    armorClass = value;
+                    this.armorClass = value;
                 }
                 else
                 {
