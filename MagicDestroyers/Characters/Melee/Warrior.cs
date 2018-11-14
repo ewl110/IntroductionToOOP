@@ -8,54 +8,49 @@
 
     internal class Warrior : Melee, IAttack, IDefend
     {
-        private const int DEFAULT_ABILITYPOINTS = 6;
-        private readonly Chainlink DEFAULT_ARMOR = new Chainlink();
-        private const Factions DEFAULT_FACTION = Factions.Melee;
-        private const int DEFAULT_HITPOINTS = 10;
-        private const int DEFAULT_LEVEL = 1;
-        private const string DEFAULT_NAME = "Warren";
-        private readonly Axe DEFAULT_WEAPON = new Axe();
+        public readonly Chainlink ARMOR = new Chainlink();
+        public readonly Axe WEAPON = new Axe();
 
-        public Warrior() : this(DEFAULT_NAME) { }
+        public Warrior() : this(Consts.Warrior.NAME) { }
 
-        public Warrior(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
+        public Warrior(string name) : this(name, Consts.LEVEL, Consts.Warrior.HIT_POINTS) { }
 
         public Warrior(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            base.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            base.Armor = DEFAULT_ARMOR;
-            base.Faction = DEFAULT_FACTION;
-            base.Weapon = DEFAULT_WEAPON;
+            base.AbilityPoints = Consts.Warrior.ABILITY_POINTS;
+            base.Armor = this.ARMOR;
+            base.Faction = Consts.Warrior.FACTION;
+            base.Weapon = this.WEAPON;
         }
 
-        public void Execute()
+        public int Execute()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 2;
         }
 
-        public void SkinHarden()
+        public int SkinHarden()
         {
-            throw new NotImplementedException();
+            return base.Armor.ArmorClass + 1;
         }
 
-        public void Strike()
+        public int Strike()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 1;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Strike();
+            return this.Strike();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Execute();
+            return this.Execute();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.SkinHarden();
+            return this.SkinHarden();
         }
     }
 }

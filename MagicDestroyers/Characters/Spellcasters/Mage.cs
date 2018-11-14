@@ -8,54 +8,49 @@
 
     class Mage : Spellcasters, IAttack, IDefend
     {
-        private const int DEFAULT_MANAPOINTS = 20;
-        private readonly ClothRobe DEFAULT_ARMOR = new ClothRobe();
-        private const Factions DEFAULT_FACTION = Factions.Spellcasters;
-        private const int DEFAULT_HITPOINTS = 6;
-        private const int DEFAULT_LEVEL = 1;
-        private const string DEFAULT_NAME = "Margeary";
-        private readonly Staff DEFAULT_WEAPON = new Staff();
+        private readonly ClothRobe ARMOR = new ClothRobe();
+        private readonly Staff WEAPON = new Staff();
 
-        public Mage() : this(DEFAULT_NAME) { }
+        public Mage() : this(Consts.Mage.NAME) { }
 
-        public Mage(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
+        public Mage(string name) : this(name, Consts.LEVEL, Consts.Mage.HIT_POINTS) { }
 
         public Mage(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            base.Armor = DEFAULT_ARMOR;
-            base.Faction = DEFAULT_FACTION;
-            base.ManaPoints = DEFAULT_MANAPOINTS;
-            base.Weapon = DEFAULT_WEAPON;
+            base.Armor = this.ARMOR;
+            base.Faction = Consts.Mage.FACTION;
+            base.ManaPoints = Consts.Mage.MANA_POINTS;
+            base.Weapon = this.WEAPON;
         }
 
-        public void ArcaneWrath()
+        public int ArcaneWrath()
         {
-            throw new NotImplementedException();
+            return 15;
         }
 
-        public void Fireball()
+        public int Fireball()
         {
-            throw new NotImplementedException();
+            return 10;
         }
 
-        public void Meditation()
+        public int Meditation()
         {
-            throw new NotImplementedException();
+            return base.Armor.ArmorClass;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Fireball();
+            return this.Fireball();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.Meditation();
+            return this.Meditation();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.ArcaneWrath();
+            return this.ArcaneWrath();
         }
     }
 }

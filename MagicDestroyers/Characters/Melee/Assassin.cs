@@ -8,54 +8,49 @@
 
     class Assassin : Melee, IAttack, IDefend
     {
-        private const int DEFAULT_ABILITYPOINTS = 4;
-        private readonly LeatherVest DEFAULT_ARMOR = new LeatherVest();
-        private const Factions DEFAULT_FACTION = Factions.Melee;
-        private const int DEFAULT_HITPOINTS = 8;
-        private const int DEFAULT_LEVEL = 1;
-        private const string DEFAULT_NAME = "Adam";
-        private readonly Sword DEFAULT_WEAPON = new Sword();
+        private readonly LeatherVest ARMOR = new LeatherVest();
+        private readonly Sword WEAPON = new Sword();
 
-        public Assassin() : this(DEFAULT_NAME) { }
+        public Assassin() : this(Consts.Assassin.NAME) { }
 
-        public Assassin(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
+        public Assassin(string name) : this(name, Consts.LEVEL, Consts.Assassin.HIT_POINTS) { }
 
         public Assassin(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            base.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            base.Armor = DEFAULT_ARMOR;
-            base.Faction = DEFAULT_FACTION;
-            base.Weapon = DEFAULT_WEAPON;
+            base.AbilityPoints = Consts.Assassin.ABILITY_POINTS;
+            base.Armor = this.ARMOR;
+            base.Faction = Consts.Assassin.FACTION;
+            base.Weapon = this.WEAPON;
         }
 
-        public void Bleed()
+        public int Bleed()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage;
         }
 
-        public void Raze()
+        public int Raze()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 6;
         }
 
-        public void Survival()
+        public int Survival()
         {
-            throw new NotImplementedException();
+            return base.Armor.ArmorClass + 1;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Bleed();
+            return this.Bleed();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.Survival();
+            return this.Survival();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Raze();
+            return this.Raze();
         }
     }
 }

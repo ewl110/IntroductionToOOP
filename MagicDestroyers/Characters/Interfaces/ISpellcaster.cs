@@ -2,7 +2,7 @@
 
 namespace Characters.Interfaces
 {
-    public interface ISpellcasrer
+    public interface ISpellcaster
     {
         //Spell MySpell { get; set; }
         //int ManaPoints { get; set; }

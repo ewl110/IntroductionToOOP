@@ -8,54 +8,49 @@
 
     class Necromancer : Spellcasters, IAttack, IDefend
     {
-        private const int DEFAULT_MANAPOINTS = 14;
-        private readonly LeatherVest DEFAULT_ARMOR = new LeatherVest();
-        private const Factions DEFAULT_FACTION = Factions.Spellcasters;
-        private const int DEFAULT_HITPOINTS = 8;
-        private const int DEFAULT_LEVEL = 1;
-        private const string DEFAULT_NAME = "Nathaniel";
-        private readonly Sword DEFAULT_WEAPON = new Sword();
+        private readonly LeatherVest ARMOR = new LeatherVest();
+        private readonly Sword WEAPON = new Sword();
 
-        public Necromancer() : this(DEFAULT_NAME) { }
+        public Necromancer() : this(Consts.Necromancer.NAME) { }
 
-        public Necromancer(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
+        public Necromancer(string name) : this(name, Consts.LEVEL, Consts.Necromancer.HIT_POINTS) { }
 
         public Necromancer(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            base.Armor = DEFAULT_ARMOR;
-            base.Faction = DEFAULT_FACTION;
-            base.ManaPoints = DEFAULT_MANAPOINTS;
-            base.Weapon = DEFAULT_WEAPON;
+            base.Armor = this.ARMOR;
+            base.Faction = Consts.Necromancer.FACTION;
+            base.ManaPoints = Consts.Necromancer.MANA_POINTS;
+            base.Weapon = this.WEAPON;
         }
 
-        public void BoneShield()
+        public int BoneShield()
         {
-            throw new NotImplementedException();
+            return base.Armor.ArmorClass + 2;
         }
 
-        public void ShadowRage()
+        public int ShadowRage()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 1;
         }
 
-        public void VampireTouch()
+        public int VampireTouch()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 4;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.ShadowRage();
+            return base.Weapon.Damage + 10;
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.BoneShield();
+            return this.BoneShield();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.VampireTouch();
+            return this.VampireTouch();
         }
     }
 }

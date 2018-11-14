@@ -13,9 +13,12 @@
         private Armor armor;
         private Factions faction;
         private int hitPoints;
+        private bool isAlive = true;
         private int level;
         private string name;
+        private int score = 0;
         private Weapon weapon;
+
 
         public Armor Armor
         {
@@ -62,6 +65,17 @@
                 return this.id;
             }
         }
+        public bool IsAlive
+        {
+            get
+            {
+                return this.isAlive;
+            }
+            private set
+            {
+                this.isAlive = value;
+            }
+        }
         public int Level
         {
             get
@@ -96,6 +110,17 @@
                 {
                     Console.WriteLine("Character names must be between 2 - 10 characters long.");
                 }
+            }
+        }
+        public int Score
+        {
+            get
+            {
+                return this.score;
+            }
+            private set
+            {
+                this.score += value;
             }
         }
         public Weapon Weapon
@@ -141,10 +166,46 @@
             return id;
         }
 
-        public abstract void Attack();
+        public abstract int Attack();
 
-        public abstract void Defend();
+        public abstract int Defend();
 
-        public abstract void SpecialAttack();
+        public abstract int SpecialAttack();
+
+        public void TakeDamage(int damage, string attackerName)
+        {
+            if (this.Defend() < damage)
+            {
+                this.hitPoints = this.hitPoints - damage - this.Defend();
+
+                if (this.hitPoints <= 0)
+                {
+                    this.isAlive = false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Haha! Your damage was not enough to harm me!");
+            }
+
+            if (!this.isAlive)
+            {
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} and is now dead!");
+            }
+            else
+            {
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName}, and now has {this.hitPoints}");
+            }
+        }
+
+        public void WonBattle()
+        {
+            this.score++;
+
+            if (this.score % 10 == 0)
+            {
+                this.level++;
+            }
+        }
     }
 }

@@ -9,54 +9,49 @@
 
     class Knight : Melee, IAttack, IDefend
     {
-        private const int DEFAULT_ABILITYPOINTS = 2;
-        private readonly Chainlink DEFAULT_ARMOR = new Chainlink();
-        private const Factions DEFAULT_FACTION = Factions.Melee;
-        private const int DEFAULT_HITPOINTS = 10;
-        private const int DEFAULT_LEVEL = 1;
-        private const string DEFAULT_NAME = "Keira";
-        private readonly Hammer DEFAULT_WEAPON = new Hammer();
+        private readonly Chainlink ARMOR = new Chainlink();
+        private readonly Hammer WEAPON = new Hammer();
 
-        public Knight() : this(DEFAULT_NAME) { }
+        public Knight() : this(Consts.Knight.NAME) { }
 
-        public Knight(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
+        public Knight(string name) : this(name, Consts.LEVEL, Consts.Knight.HIT_POINTS) { }
 
         public Knight(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            base.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            base.Armor = DEFAULT_ARMOR;
-            base.Faction = DEFAULT_FACTION;
-            base.Weapon = DEFAULT_WEAPON;
+            base.AbilityPoints = Consts.Knight.ABILITY_POINTS;
+            base.Armor = this.ARMOR;
+            base.Faction = Consts.Knight.FACTION;
+            base.Weapon = this.WEAPON;
         }
 
-        public void HolyBlow()
+        public int HolyBlow()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 1;
         }
 
-        public void PurifySoul()
+        public int PurifySoul()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 2;
         }
 
-        public void RighteousWings()
+        public int RighteousWings()
         {
-            throw new NotImplementedException();
+            return base.Armor.ArmorClass + 3;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.HolyBlow();
+            return this.HolyBlow();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.PurifySoul();
+            return this.PurifySoul();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.RighteousWings();
+            return this.RighteousWings();
         }
     }
 }

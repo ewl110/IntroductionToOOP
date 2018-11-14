@@ -54,7 +54,7 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\Interfaces\IAttack.cs" />
     <Compile Include="Characters\Interfaces\IDefend.cs" />
-    <Compile Include="Characters\Interfaces\ISpellcasrer.cs" />
+    <Compile Include="Characters\Interfaces\ISpellcaster.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcasters\Druid.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="Characters\Spellcasters\Necromancer.cs" />
     <Compile Include="Characters\Melee\Warrior.cs" />
     <Compile Include="Characters\Spellcasters\Spellcasters.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Enumerations\Factions.cs" />
     <Compile Include="InfoHandler.cs" />
     <Compile Include="Program.cs" />
