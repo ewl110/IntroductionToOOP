@@ -1,18 +1,31 @@
 ﻿namespace MagicDestroyers.Characters
 {
+    using MagicDestroyers.Armor;
     using MagicDestroyers.Characters.Interfaces;
     using MagicDestroyers.Enumerations;
+    using MagicDestroyers.Weapons;
     using System;
 
     public abstract class Character : IAttack, IDefend
     {
         public readonly Guid id;
 
+        private Armor armor;
         private Factions faction;
         private int hitPoints;
         private int level;
         private string name;
+        private Weapon weapon;
 
+        public Armor Armor
+        {
+            get {
+                return this.armor;
+            }
+            set {
+                this.armor = value;
+            }
+        }
         public Factions Faction
         {
             get
@@ -85,6 +98,17 @@
                 }
             }
         }
+        public Weapon Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
+            }
+        }
 
         protected Character()
         {
@@ -117,19 +141,10 @@
             return id;
         }
 
-        public void Attack()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Attack();
 
-        public void Defend()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Defend();
 
-        public void SpecialAttack()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void SpecialAttack();
     }
 }

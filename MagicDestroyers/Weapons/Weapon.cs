@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Weapon
+    public abstract class Weapon
     {
         private int damage;
 

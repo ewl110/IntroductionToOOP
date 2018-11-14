@@ -1,24 +1,53 @@
-﻿using System;
-
+﻿
 namespace MagicDestroyers
 {
+    using System;
+    using MagicDestroyers.Characters;
     using MagicDestroyers.Characters.Melee;
     using MagicDestroyers.Characters.Spellcasters;
+    using System.Collections.Generic;
 
     class Program
     {
         static void Main()
         {
-            Warrior warrior = new Warrior("Steven");
+            Warrior warrior = new Warrior("steven");
             Console.WriteLine(
-                $"Name: {warrior.Name} \nLevel: {warrior.Level} \nHP: {warrior.HitPoints} \nAbility Points: {warrior.AbilityPoints} \nArmor: {warrior.Armor.ArmorClass} \nWeapon: {warrior.Weapon.Damage}"
+               $"name: {warrior.Name} " +
+               $"\nlevel: {warrior.Level} " + 
+               $"\nhp: {warrior.HitPoints} " + 
+               $"\nability points: {warrior.AbilityPoints} " +
+               $"\narmor: {warrior.Armor.ArmorClass} " + 
+               $"\nweapon: {warrior.Weapon.Damage}"
             );
-            //int warriorDamage = warrior.Weapon.Damage;
+            
             Console.WriteLine();
             Druid druid = new Druid();
             Console.WriteLine(
-                $"Name: {druid.Name} \nLevel: {druid.Level} \nHP: {druid.HitPoints} \nMana Points: {druid.ManaPoints} \nArmor: {druid.Armor.ArmorClass} \nWeapon: {druid.Weapon.Damage}"
+                $"name: {druid.Name} " +
+                $"\nlevel: {druid.Level} " + 
+                $"\nhp: {druid.HitPoints} " + 
+                $"\nmana points: {druid.ManaPoints} " + 
+                $"\narmor: {druid.Armor.ArmorClass} " + 
+                $"\nweapon: {druid.Weapon.Damage}"
             );
+
+            //Character assassin = new Assassin();
+            //Character druid = new Druid();
+            //Character knight = new Knight();
+            //Character mage = new Mage();
+            //Character necromancer = new Necromancer();
+            //Character warrior = new Warrior();
+
+            //List<Character> meleeTeam = new List<Character>();
+            //meleeTeam.Add(assassin);
+            //meleeTeam.Add(knight);
+            //meleeTeam.Add(warrior);
+
+            //List<Character> spellTeam = new List<Character>();
+            //spellTeam.Add(druid);
+            //spellTeam.Add(mage);
+            //spellTeam.Add(necromancer);
         }
     }
 }

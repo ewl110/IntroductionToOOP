@@ -1,11 +1,12 @@
 ﻿namespace MagicDestroyers.Characters.Spellcasters
 {
     using MagicDestroyers.Armor.Leather;
+    using MagicDestroyers.Characters.Interfaces;
     using MagicDestroyers.Enumerations;
     using MagicDestroyers.Weapons.Sharp;
     using System;
 
-    class Necromancer : Spellcasters
+    class Necromancer : Spellcasters, IAttack, IDefend
     {
         private const int DEFAULT_MANAPOINTS = 14;
         private readonly LeatherVest DEFAULT_ARMOR = new LeatherVest();
@@ -15,42 +16,16 @@
         private const string DEFAULT_NAME = "Nathaniel";
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
-        private LeatherVest armor;
-        private Sword weapon;
-
-        public LeatherVest Armor
-        {
-            get
-            {
-                return this.armor;
-            }
-            set
-            {
-                this.armor = value;
-            }
-        }
-        public Sword Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Necromancer() : this(DEFAULT_NAME) { }
 
         public Necromancer(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
         public Necromancer(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            this.Armor = DEFAULT_ARMOR;
+            base.Armor = DEFAULT_ARMOR;
             base.Faction = DEFAULT_FACTION;
             base.ManaPoints = DEFAULT_MANAPOINTS;
-            this.Weapon = DEFAULT_WEAPON;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void BoneShield()
@@ -66,6 +41,21 @@
         public void VampireTouch()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.ShadowRage();
+        }
+
+        public override void Defend()
+        {
+            this.BoneShield();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.VampireTouch();
         }
     }
 }

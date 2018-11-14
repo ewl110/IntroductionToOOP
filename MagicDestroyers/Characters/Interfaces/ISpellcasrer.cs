@@ -1,7 +1,12 @@
-﻿namespace MagicDestroyers.Characters.Interfaces
+﻿using MagicDestroyers.Characters.Melee;
+
+namespace Characters.Interfaces
 {
     public interface ISpellcasrer
     {
-        int ManaPoints { get; set; }
+        //Spell MySpell { get; set; }
+        //int ManaPoints { get; set; }
+
+        //void CastSpell(Warrior warrior);
     }
 }

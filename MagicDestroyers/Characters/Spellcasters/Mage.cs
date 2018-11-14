@@ -1,11 +1,12 @@
 ﻿namespace MagicDestroyers.Characters.Spellcasters
 {
     using MagicDestroyers.Armor.Cloth;
+    using MagicDestroyers.Characters.Interfaces;
     using MagicDestroyers.Enumerations;
     using MagicDestroyers.Weapons.Blunt;
     using System;
 
-    class Mage : Spellcasters
+    class Mage : Spellcasters, IAttack, IDefend
     {
         private const int DEFAULT_MANAPOINTS = 20;
         private readonly ClothRobe DEFAULT_ARMOR = new ClothRobe();
@@ -15,42 +16,16 @@
         private const string DEFAULT_NAME = "Margeary";
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
-        private ClothRobe armor;
-        private Staff weapon;
-
-        public ClothRobe Armor
-        {
-            get
-            {
-                return this.armor;
-            }
-            set
-            {
-                this.armor = value;
-            }
-        }
-        public Staff Weapon
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Mage() : this(DEFAULT_NAME) { }
 
         public Mage(string name) : this(name, DEFAULT_LEVEL, DEFAULT_HITPOINTS) { }
 
         public Mage(string name, int level, int hitPoints) : base(name, level, hitPoints)
         {
-            this.Armor = DEFAULT_ARMOR;
+            base.Armor = DEFAULT_ARMOR;
             base.Faction = DEFAULT_FACTION;
             base.ManaPoints = DEFAULT_MANAPOINTS;
-            this.Weapon = DEFAULT_WEAPON;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void ArcaneWrath()
@@ -66,6 +41,21 @@
         public void Meditation()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.Fireball();
+        }
+
+        public override void Defend()
+        {
+            this.Meditation();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.ArcaneWrath();
         }
     }
 }
