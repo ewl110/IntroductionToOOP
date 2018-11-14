@@ -49,16 +49,16 @@ namespace MagicDestroyers
             //spellTeam.Add(mage);
             //spellTeam.Add(necromancer);
 
-            int currentMelee = 0;
-            int currentSpellcaster = 0;
+            Melee currentMelee;
+            Spellcasters currentSpellcaster;
             bool gameOver = false;
             Random rng = new Random();
 
             List<Character> Characters = new List<Character>()
             {
-                //new Assassin(),
+                new Assassin(),
                 new Druid(),
-                //new Knight(),
+                new Knight(),
                 new Mage(),
                 new Necromancer(),
                 new Warrior()
@@ -82,19 +82,19 @@ namespace MagicDestroyers
             while (!gameOver)
             {
                 //1. Take a random melee
-                currentMelee = rng.Next(0, meleeTeam.Count);
+                currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
 
                 //2. Take a random spellcaster
-                currentSpellcaster = rng.Next(0, spellTeam.Count);
+                currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)];
 
                 //3. Melee attack spellcaster
-                spellTeam[currentSpellcaster].TakeDamage(meleeTeam[currentMelee].Attack(), meleeTeam[currentMelee].Name);
+                currentSpellcaster.TakeDamage(currentMelee.Attack(), currentMelee.Name, currentMelee.GetType().ToString());
                 //3.1 Check if character is dead and remove from team
                 //3.2 If dead, get another random character
-                if (!spellTeam[currentSpellcaster].IsAlive)
+                if (!currentSpellcaster.IsAlive)
                 {
-                    meleeTeam[currentMelee].WonBattle();
-                    spellTeam.Remove(spellTeam[currentSpellcaster]);
+                    currentMelee.WonBattle();
+                    spellTeam.Remove(currentSpellcaster);
 
                     if (spellTeam.Count == 0)
                     {
@@ -103,18 +103,18 @@ namespace MagicDestroyers
                     }
                     else
                     {
-                        currentSpellcaster = rng.Next(0, spellTeam.Count);
+                        currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)];
                     }
                 }
 
                 //4. Spellcaster Attacks Melee
-                meleeTeam[currentMelee].TakeDamage(spellTeam[currentSpellcaster].Attack(), spellTeam[currentSpellcaster].Name);
+                currentMelee.TakeDamage(currentSpellcaster.Attack(), currentSpellcaster.Name, currentSpellcaster.GetType().ToString());
                 //4.1 Check if character is dead and remove from team
                 //4.2 If dead, get another random character
-                if (!meleeTeam[currentMelee].IsAlive)
+                if (!currentMelee.IsAlive)
                 {
-                    spellTeam[currentSpellcaster].WonBattle();
-                    meleeTeam.Remove(meleeTeam[currentMelee]);
+                    currentSpellcaster.WonBattle();
+                    meleeTeam.Remove(currentMelee);
 
                     if (meleeTeam.Count == 0)
                     {
@@ -123,7 +123,7 @@ namespace MagicDestroyers
                     }
                     else
                     {
-                        currentMelee = rng.Next(0, meleeTeam.Count);
+                        currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
                     }
                 }
 

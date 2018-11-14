@@ -172,7 +172,7 @@
 
         public abstract int SpecialAttack();
 
-        public void TakeDamage(int damage, string attackerName)
+        public void TakeDamage(int damage, string attackerName, string type)
         {
             if (this.Defend() < damage)
             {
@@ -190,11 +190,11 @@
 
             if (!this.isAlive)
             {
-                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} and is now dead!");
+                Tools.TypeSpecificColors($"{this.name} received {damage} damage from {attackerName} and is now dead!", type);
             }
             else
             {
-                Console.WriteLine($"{this.name} received {damage} damage from {attackerName}, and now has {this.hitPoints}");
+                Tools.TypeSpecificColors($"{this.name} received {damage} damage from {attackerName}, and now has {this.hitPoints} hp.", type);
             }
         }
 
