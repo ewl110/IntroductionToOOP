@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Armor.Cloth
 {
-    class Cloth : Armor
+    abstract class Cloth : Armor
     {
         protected Cloth(int armorClass) : base(armorClass) { }
     }

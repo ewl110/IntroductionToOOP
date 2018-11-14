@@ -4,7 +4,7 @@
     using MagicDestroyers.Enumerations;
     using System;
 
-    public class Character : IAttack, IDefend
+    public abstract class Character : IAttack, IDefend
     {
         public readonly Guid id;
 

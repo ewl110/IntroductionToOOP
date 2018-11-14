@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Melee : Character
+    abstract class Melee : Character
     {
         private int abilityPoints;
 

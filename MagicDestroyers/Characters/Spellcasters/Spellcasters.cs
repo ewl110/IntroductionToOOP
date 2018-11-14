@@ -2,7 +2,7 @@
 {
     using System;
 
-    class Spellcasters : Character
+    abstract class Spellcasters : Character
     {
         private int manaPoints;
 
