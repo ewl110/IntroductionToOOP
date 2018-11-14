@@ -1,9 +1,10 @@
-﻿using IntroductionToOOP.Enumerations;
+﻿using IntroductionToOOP.Characters.Interfaces;
+using IntroductionToOOP.Enumerations;
 using IntroductionToOOP.Weapons.Sharp;
 using System;
 namespace IntroductionToOOP.Characters.Melee
 {
-    public class Warrior : Character
+    public class Warrior : Character, IDoMath
     {
         private const int DEFAULT_HITPOINTS = 100;
         private const string DEFAULT_NAME = "Warren";
@@ -18,6 +19,11 @@ namespace IntroductionToOOP.Characters.Melee
                 this.weapon = new Sword();
             }
         }
+
+        private int numberA;
+        private int numberB;
+        public int NumberA { get => this.numberA; set => this.numberA = value; }
+        public int NumberB { get => this.numberB; set => this.numberB = value; }
 
         public Warrior() : this(DEFAULT_NAME) {}
 
@@ -52,6 +58,11 @@ namespace IntroductionToOOP.Characters.Melee
                 $"Default Name is: {DEFAULT_NAME}" + 
                 $"\nDefault HitPoints: {DEFAULT_HITPOINTS}"
             );
+        }
+
+        public void AddTWoNumbers()
+        {
+            Console.WriteLine(this.numberA + this.numberB);
         }
     }
 }

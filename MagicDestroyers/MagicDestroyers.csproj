@@ -52,6 +52,8 @@
     <Compile Include="Armor\Leather\LeatherVest.cs" />
     <Compile Include="Armor\Mail\Mail.cs" />
     <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Interfaces\IAttack.cs" />
+    <Compile Include="Characters\Interfaces\IDefend.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcasters\Druid.cs" />

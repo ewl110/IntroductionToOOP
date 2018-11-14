@@ -1,9 +1,10 @@
 ﻿namespace MagicDestroyers.Characters
 {
+    using MagicDestroyers.Characters.Interfaces;
     using MagicDestroyers.Enumerations;
     using System;
 
-    public class Character
+    public class Character : IAttack, IDefend
     {
         public readonly Guid id;
 
@@ -114,6 +115,21 @@
             }
 
             return id;
+        }
+
+        public void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Defend()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SpecialAttack()
+        {
+            throw new NotImplementedException();
         }
     }
 }
